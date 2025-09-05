@@ -1,4 +1,4 @@
-# Multi-Account Switcher for Claude Code
+# Multi-Account Switcher Plus for Claude Code
 
 A simple tool to manage and switch between multiple Claude Code accounts on macOS, Linux, and WSL.
 
@@ -15,7 +15,7 @@ A simple tool to manage and switch between multiple Claude Code accounts on macO
 Download the script directly:
 
 ```bash
-curl -O https://raw.githubusercontent.com/ming86/cc-account-switcher/main/ccswitch.sh
+curl -O https://raw.githubusercontent.com/tinyvane/cc-account-switcher-plus/main/ccswitch.sh
 chmod +x ccswitch.sh
 ```
 
@@ -42,16 +42,20 @@ chmod +x ccswitch.sh
 
 # Show help
 ./ccswitch.sh --help
+
+# Switcher Doctor
+./ccswitch.sh --doctor
 ```
 
 ### First Time Setup
 
 1. **Log into Claude Code** with your first account (make sure you're actively logged in)
-2. Run `./ccswitch.sh --add-account` to add it to managed accounts
-3. **Log out** and log into Claude Code with your second account
-4. Run `./ccswitch.sh --add-account` again
-5. Now you can switch between accounts with `./ccswitch.sh --switch`
-6. **Important**: After each switch, restart Claude Code to use the new authentication
+2. Run `./ccswitch.sh --doctor` to diagnocs whether 2 cluade account files stays in correct position
+3. Run `./ccswitch.sh --add-account` to add it to managed accounts
+4. **Log out** and log into Claude Code with your second account
+5. Run `./ccswitch.sh --add-account` again
+6. Now you can switch between accounts with `./ccswitch.sh --switch`
+7. **Important**: After each switch, restart Claude Code to use the new authentication
 
 > **What gets switched:** Only your authentication credentials change. Your themes, settings, preferences, and chat history remain exactly the same.
 
@@ -125,3 +129,6 @@ Your current Claude Code login will remain active.
 ## License
 
 MIT License - see LICENSE file for details
+
+## Thanks to
+Ming66 and his repo: https://github.com/ming86/cc-account-switcher
